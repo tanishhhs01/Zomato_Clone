@@ -1,0 +1,470 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+    height: 80px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    z-index: 10;
+}
+
+
+/* Zomato header logo */
+
+.logo img {
+    width: 130px;
+
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Navigation */
+
+header ul {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    list-style: none;
+}
+
+header ul li a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #eeeeee;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding-top: 50px;
+
+    /*
+        YOUR ORIGINAL BACKGROUND
+        NO RED OVERLAY
+    */
+
+    background-image: url("../img/bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Main Zomato logo */
+
+.hero > img {
+    width: 300px;
+
+    margin-bottom: 25px;
+
+    animation: fadeUp 0.8s ease;
+}
+
+
+/* Hero text */
+
+.hero > p {
+    color: white;
+
+    font-size: 25px;
+
+    margin-bottom: 30px;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+    animation: fadeUp 1s ease;
+}
+
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+    display: flex;
+
+    animation: fadeUp 1.2s ease;
+}
+
+
+/* Input */
+
+.search-box input {
+    width: 430px;
+    height: 55px;
+
+    padding: 0 18px;
+
+    border: none;
+    outline: none;
+
+    background: white;
+
+    font-size: 16px;
+
+    border-radius: 6px 0 0 6px;
+}
+
+.search-box input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.search-box input::placeholder {
+    color: #777;
+}
+
+
+/* Search button */
+
+.search-box button {
+    width: 100px;
+    height: 55px;
+
+    border: none;
+
+    background: #e23744;
+
+    color: white;
+
+    font-size: 16px;
+
+    border-radius: 0 6px 6px 0;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease,
+                transform 0.2s ease;
+}
+
+.search-box button:hover {
+    background: #c82333;
+
+    transform: translateY(-2px);
+}
+
+.search-box button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   FOOD SECTION
+========================= */
+
+.food-section {
+    min-height: 600px;
+
+    padding: 80px 7%;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+/* Heading */
+
+.food-section h1 {
+    font-size: 36px;
+
+    margin-bottom: 12px;
+
+    color: #222;
+}
+
+
+/* Description */
+
+.section-description {
+    font-size: 18px;
+
+    color: #666;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+/* Individual card */
+
+.card {
+    width: 350px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Card image */
+
+.card-image {
+    width: 100%;
+    height: 200px;
+
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+
+/* Card content */
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content h2 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #666;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+.card-content a {
+    color: #e23744;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #111;
+
+    color: white;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 4%;
+    }
+
+    header ul {
+        gap: 18px;
+    }
+
+    header ul li a {
+        font-size: 14px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    header ul {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero > img {
+        width: 220px;
+    }
+
+    .hero > p {
+        font-size: 19px;
+
+        padding: 0 20px;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+
+    .search-box input {
+        width: 100%;
+
+        font-size: 14px;
+    }
+
+    .search-box button {
+        width: 90px;
+    }
+
+    .food-section {
+        padding: 60px 20px;
+    }
+
+    .food-section h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
